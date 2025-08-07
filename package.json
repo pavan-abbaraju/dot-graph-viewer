@@ -1,0 +1,29 @@
+{
+  "name": "dot-graph-viewer",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "@hpcc-js/wasm": "^2.14.0"
+  },
+  "build": {
+    "appId": "com.dot.viewer",
+    "productName": "DOT Graph Viewer",
+    "win": {
+      "target": "portable"
+    },
+    "files": [
+      "public/**/*",
+      "src/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ]
+  }
+}
